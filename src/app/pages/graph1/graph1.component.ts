@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MultiDataSet } from 'ng2-charts';
 
 @Component({
   selector: 'app-graph1',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class Graph1Component implements OnInit {
+
+  title: string = 'Sin titutlo';
+  doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  doughnutChartData: MultiDataSet = [
+    [500, 10, 100],
+  ];
 
   constructor() { }
 
